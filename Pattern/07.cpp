@@ -16,7 +16,7 @@ void print7(int n){
             cout<<" ";
         }
         //for star
-        for(int j=1;j<=2*n-i;j++){
+        for(char j=1;j<=2*i+1;j++){
             cout<<"* ";
         }
         //for spaces

@@ -9,11 +9,14 @@
 using namespace std;
 
 void print16(int n){
+        
     for(int i=0;i<n;i++){
-        for(char j='A';j<=i;j++){
-            cout<<<<" ";
+        char q='A'+i;
+        for(char j=0;j<=i;j++){
+            cout<<q<<" ";
         }
         cout<<endl;
+        
     }
 }
 
