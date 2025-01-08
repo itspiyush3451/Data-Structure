@@ -3,7 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int isPalindrome(int n){
+bool isPalindrome(int n){
     int rev=0,mod,x=n;
     while(n>0){
          mod = n%10;
@@ -11,12 +11,11 @@ int isPalindrome(int n){
          rev=(rev*10)+mod;
 
     }
-    return rev==x?1:0;
+    return rev==x?true:false;
 }
 
 int main(){
     int x;
     cin>>x;
-    int res=isPalindrome(x);
-    cout<<res;
+    cout<<isPalindrome(x);
 }
