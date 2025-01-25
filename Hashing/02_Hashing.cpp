@@ -13,6 +13,14 @@ int main(){
     for(int i=0;i<s.size();i++){
         hash[s[i]-'a']++;  //----> if we use hash[256] then we dont need to subtract (- 'a' )  we can directly use hash[s[i]]
     }
+
+
+//precomputing using hashmap
+   /*/ map<char,int> mpp;
+     for(int i=0;i<s.size();i++){
+        mpp[s[i]-'a']++;  //----> if we use hash[256] then we dont need to subtract (- 'a' )  we can directly use hash[s[i]]
+    }*/
+    
     int q;
     cin>>q;
     while(q--){
