@@ -1,4 +1,5 @@
 // Selections Sort :- Selecting the minimum value and swapping it with the index(starting from index 0 ).
+//Time complexity : O(n^2) -best,avg,worst
 #include<bits/stdc++.h>
 using namespace std;
 
