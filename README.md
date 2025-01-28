@@ -33,7 +33,10 @@ Here are some of the key topics I plan to cover:
 
 1. **Clone the repository:**
 
+```bash
 git clone https://github.com/itspiyush3451/Data-Structure.git
+```
+
 
 
 2. **Navigate to the topic folder you're interested in.**
