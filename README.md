@@ -14,6 +14,11 @@ This repository serves as a collection of:
 
 Here are some of the key topics I plan to cover:
 
+
+- Basic Logic Building Programs
+- Patterns
+- Recursion
+- String
 - Arrays
 - Linked Lists
 - Stacks
