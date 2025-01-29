@@ -5,11 +5,8 @@ using namespace std;
 
 
 void SelectionSort(int arr[] , int n){
-        
-       
         for(int i=0;i<=n-2;i++){
             int min=i; 
-            
             for(int j=i;j<=n-1;j++){
                 if(arr[j]<arr[min]){
                    min=j;
@@ -17,8 +14,7 @@ void SelectionSort(int arr[] , int n){
                 //Can use this to debug or check the values of arr[min] andarr[j] tthrough the comparison
                 // else{
                 //     cout<<arr[j]<<" "<<arr[min]<<" ";
-                // }
-                
+                // }  
             }
              swap(arr[i],arr[min]);
         }
