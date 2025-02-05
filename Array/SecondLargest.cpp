@@ -1,22 +1,44 @@
-// Finging the largest element in the array
+// Finging the second largest element in the array
 
 #include<bits/stdc++.h>
 using namespace std;
 
 int SecLarge(int arr[] ,int n){
        int largest = arr[0];
-       int slargest = -1;
-       for(int i =1;i<n;i++){
+       int slargest = arr[0];
+       for(int i =0;i<n;i++){
         if(arr[i]>largest){
-            slargest =largest;
             largest =arr[i];
         }
-        else if(arr[i]<largest && arr[i]>slargest){
-            slargest =arr[i];
-        }
        }
-        return slargest;
+       for(int i =0;i<n;i++){
+            if(arr[i]>slargest &&  arr[i]<largest){
+                slargest =arr[i];
+            }
+       }
+       return slargest;
+
+       
 }
+
+//optimal solution
+// int SecLarge(int arr[] ,int n){
+//        int largest = arr[0];
+//        int slargest = -1;
+//        for(int i =1;i<n;i++){
+//         if(arr[i]>largest){
+//             slargest =largest;
+//             largest =arr[i];
+//         }
+//         else if(arr[i]<largest && arr[i]>slargest){
+//             slargest =arr[i];
+//         }
+//        }
+//         return slargest;
+// }
+
+
+
 int main(){
     int n;
     cout<<"enter the total no of array"<<endl;
