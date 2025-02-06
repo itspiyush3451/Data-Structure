@@ -5,8 +5,6 @@ using namespace std;
 
 
 //Brute force
-
-
 void kleftRotate(int arr[] , int n , int k){
         k=k%n;
         int temp[k];

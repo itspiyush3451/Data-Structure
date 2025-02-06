@@ -1,14 +1,14 @@
-// Left rotate the array by one 
+// Right rotate the array by one 
 // Time complexity : O(N) , Space complexity : O(N)
 #include<bits/stdc++.h>
 using namespace std;
 
-void leftRotate(int arr[] , int n){
-        int temp =arr[0];
-        for(int i =1;i<n-1;i++){
-            arr[i-1]=arr[i];
-        }
-        arr[n-1]=temp;
+void rightRotate(int arr[],int n){
+    int temp =arr[n-1];
+    for(int i=n-1;i>=0;i--){
+        arr[i+1]=arr[i];
+    }
+    arr[0]=temp;
 }
 
 
@@ -25,9 +25,10 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<arr[i];
     }
-    leftRotate(arr,n);
+   
+    rightRotate(arr,n);
     
-    cout<<"After left rotation = "<< endl;
+    cout<<"After Right  rotation = "<< endl;
     for(int i=0;i<n;i++){
         cout<<arr[i];
     }
