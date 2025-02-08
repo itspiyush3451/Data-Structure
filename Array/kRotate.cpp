@@ -30,7 +30,29 @@ void kleftRotate(int arr[] , int n , int k){
 // }
 
 
+//Brute force
+// void kRightRotate(int arr[],int n,int k){
+//     vector<int> temp(k);
+//     k=k%n ;
+//     for(int i=0;i<k;i++){
+//         temp[i] = arr[n-k+i];
+//     }
+//     for(int i=n-1;i>=k;i--){
+//         arr[i]=arr[i-k];
+//     }
+//     for(int i=0;i<k;i++){
+//         arr[i]=temp[i];
+//     }
+// }
 
+//Optimal solution (Time complexity : O(N) , space complexity :O(1)-->no extra space)
+
+void kRightRotate(int arr[] , int n , int k){
+     k=k%n;
+reverse(arr,arr+(n-k));
+reverse(arr+(n-k),arr+n);
+reverse(arr,arr+n);
+}
 
 int main(){
      int n,k;
@@ -48,8 +70,9 @@ int main(){
         cout<<arr[i];
     }
     cout<<endl;
-    kleftRotate(arr,n,k);
-    cout<<"After k times,  left rotation = "<< endl;
+    // kleftRotate(arr,n,k);
+    kRightRotate(arr,n,k);
+    cout<<"After k times,  left/Right rotation = "<< endl;
         for(int i=0;i<n;i++){
         cout<<arr[i];
        }
