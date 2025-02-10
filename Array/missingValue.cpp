@@ -24,19 +24,47 @@ int missingValue(vector<int> &nums){
     // }
     // return n;
 
+
     //Better solution (using hash);
-     int  hash[n+1] ={0};
-     for(int i=0;i<n;i++){
-        hash[nums[i]]=1;
-     }
-     for(int i=1;i<=n;i++){
-       // cout<<"value : " <<hash[nums[i]]<<endl;
-        if(hash[i]==0){
-            return i;
-        }
+    //  int  hash[n+1] ={0};
+    //  for(int i=0;i<n;i++){
+    //     hash[nums[i]]=1;
+    //  }
+    //  for(int i=1;i<=n;i++){
+    //    // cout<<"value : " <<hash[nums[i]]<<endl;
+    //     if(hash[i]==0){
+    //         return i;
+    //     }
         
+    //  }
+    //  return n;
+
+
+     //optimal solution
+    //  int sum=0,sum2=0;
+    //  for(int i=0;i<n;i++){
+    //         sum+=nums[i];
+    //         cout<<" sum= "<<sum<<endl;
+            
+    //  }
+    //  for(int i=1;i<=n;i++){
+    //     sum2+=i;
+    //     cout<<" sum2= "<<sum2<<endl;
+    //  }
+    //  return sum2-sum;
+
+     //solution using XOR(optimal)
+     int xor1=0;
+     for(int i=1;i<=n;i++){
+        xor1=xor1^i;
      }
-     return n;
+     int xor2=0;
+     for(int i=0;i<n;i++){
+        xor2=xor2^nums[i];
+     }
+     return xor1^xor2;
+
+
 }
 
 int main() {
