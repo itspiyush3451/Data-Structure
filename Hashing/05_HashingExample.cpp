@@ -25,7 +25,7 @@ vector<int> Freq(vector<int> &arr){
                 if(!mpp.count(i+1)) temp.push_back(0);
                 else  temp.push_back(mpp[i+1]);
 
-                // temp[i]=mpp[i+1];  -->u can directly assign the value but it will through segmentation error , if you exceed the key 
+                // temp[i]=mpp[i+1];  -->u can directly assign the value but it will throw segmentation error , if you exceed the key 
             }
             return temp;
 }

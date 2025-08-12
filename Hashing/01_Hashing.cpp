@@ -11,7 +11,7 @@ int main(){
         cin>>arr[i];
     }
 
-//Pre computing the values by storing there count of occurrence in hash
+//Pre computing the values by storing their count of occurrence in hash
     int hash[12]={0};
     for(i=0;i<n;i++){
         hash[arr[i]]+=1;
