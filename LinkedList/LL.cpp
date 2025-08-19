@@ -35,9 +35,9 @@ Node* arrToLL(vector<int> arr){
     
 }
 
-int length(Node* heaad){
+int length(Node* head){
     int len = 0;
-    Node* temp = heaad;
+    Node* temp = head;
     while(temp){
         len++;
         temp = temp->next;
